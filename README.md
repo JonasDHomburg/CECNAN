@@ -1,7 +1,9 @@
 # Constraint Exploration of Convolutional Network Architectures with Neuroevolution
 
 ## Abstract
-The effort spent on adapting existing networks to new applications has motivated the automated architecture search. Network structures discovered with evolutionary or other search algorithms have surpassed hand-crafted image classifiers in terms of accuracy. However, these approaches do not constrain certain characteristics like network size or numbers of parameters, which leads to unnecessary computational effort. Thus, this work shows that generational and evolutionary algorithms can be used for a constrained exploration of convolutional network architectures to create various networks which represent a trade-off in applied constraints.
+The effort spent on adapting existing networks to new applications has motivated the automated architecture search. Network structures discovered with evolutionary or other search algorithms have surpassed hand-crafted image classifiers in terms of accuracy. However, these approaches do not constrain certain characteristics like network size or numbers of parameters, which leads to unnecessary computational effort. Thus, this work shows that generational evolutionary algorithms can be used for a constrained exploration of convolutional network architectures to create various networks which represent a trade-off in applied constraints.
+
+[![DOI](https://zenodo.org/badge/172699838.svg)](https://zenodo.org/badge/latestdoi/172699838)
 
 ##### Example:
 ```python
@@ -27,7 +29,8 @@ def run():
     genMan = GenerationManager(initializationStrategy=initStrat,
                                replacement=replacementScheme,
                                mem_type=GenerationManager.MEM_SQLITE3,
-                               # sqlite3 or mySql should be used for a complete logfile, to get only some statistics: MEM_STATS
+                               # sqlite3 or mySql should be used for a complete logfile,
+                               # to get only some statistics: MEM_STATS
                                gen_log='/path/to/log/file.db3'
                                )
 
@@ -49,13 +52,15 @@ def run():
         saturationStrategy=saturationStrat,
         selection=selectStrat,
 
-        crossover_size=10, # 2 new networks per crossing pair creates 12 new networks per generation -> uniform selection of 10
+        crossover_size=10,
+        # 2 new networks per crossing pair creates 12 new networks per generation
+        # -> uniform selection of 10
         mutation_rate=.4
     )
     core.run()
     pass
 
-from ea.GenerationManager import GenerationManager, PlaybackGenManager
+from ea.GenerationManager import PlaybackGenManager
 from plotting.plot_ea import generation_history
 
 def plot():
