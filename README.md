@@ -1,9 +1,9 @@
 # Constraint Exploration of Convolutional Network Architectures with Neuroevolution
 
 ## Abstract
-The effort spent on adapting existing networks to new applications has motivated the automated architecture search. Network structures discovered with evolutionary or other search algorithms have surpassed hand-crafted image classifiers in terms of accuracy. However, these approaches do not constrain certain characteristics like network size or numbers of parameters, which leads to unnecessary computational effort. Thus, this work shows that generational evolutionary algorithms can be used for a constrained exploration of convolutional network architectures to create various networks which represent a trade-off in applied constraints.
+The effort spent on adapting existing networks to new applications has motivated the automated architecture search. Network structures discovered with evolutionary or other search algorithms have surpassed hand-crafted image classifiers in terms of accuracy. However, these approaches do not constrain certain characteristics like network size, which leads to unnecessary computational effort. Thus, this work shows that generational evolutionary algorithms can be used for a constrained exploration of convolutional network architectures to create a selection of networks for a specific application or target architecture.
 
-[![DOI](https://zenodo.org/badge/172699838.svg)](https://zenodo.org/badge/latestdoi/172699838)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2578871.svg)](https://doi.org/10.5281/zenodo.2578871)
 
 ##### Example:
 ```python
@@ -78,4 +78,5 @@ def plot():
 
 if __name__ == '__main__':
     run()
+    plot()
 ```

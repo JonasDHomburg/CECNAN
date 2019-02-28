@@ -1,11 +1,11 @@
 from setuptools import setup
 setup(name='ea',
-      version='0.1',
-      description='Collection of evolutions algorithms and plotting functions.',
-      url='https://git.ks.techfak.uni-bielefeld.de/projects/ma-jhomburg.git',
+      version='1.0',
+      description='Constraint Exploration of Convolutional Network Architectures with Neuroevolution.',
+      url='https://github.com/JonasDHomburg/CECNAN.git',
       author='Jonas Dominik Homburg',
-      author_email='jhomburg@techfak.de',
-      license='MIT',
+      author_email='jonasdhomburg@gmail.com',
+      license='GPL-2.0',
       packages=[
         'ea',
         'ea.representations',
@@ -28,5 +28,3 @@ setup(name='ea',
         'tensorfow': ['tensorflow'],
       },
       zip_safe=False)
-
-
